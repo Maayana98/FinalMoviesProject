@@ -37,26 +37,12 @@ Router.get('/logout', CookieValidation, async function(req, res) {
     res.send();
 })
 
-
 Router.use('/user', clientsRouter)
 
+Router.use('/orders', OrdersRouter)
 
-Router.use('/reservations', OrdersRouter)
-
-
-
-Router.use('/hotels', MoviesRouter)
-
+Router.use('/movies', MoviesRouter)
 
 Router.use('/notifications', notificationsRouter)
 
 module.exports = Router;
-
-
-
-
-
-
-
-
-
